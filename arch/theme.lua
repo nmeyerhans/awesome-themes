@@ -8,13 +8,14 @@ theme = {}
 
 home          = os.getenv("HOME")
 config        = awful.util.getdir("config")
-shared        = "/usr/share/awesome"
+-- shared        = "/usr/share/awesome"
+shared        = config .. "/awesome-themes/arch"
 if not awful.util.file_readable(shared .. "/icons/awesome16.png") then
     shared    = "/usr/share/local/awesome"
 end
-sharedicons   = shared .. "/icons"
-sharedthemes  = shared .. "/themes"
-themes        = config .. "/themes"
+sharedicons   = "/usr/share/awesome/icons"
+sharedthemes  = "/usr/share/awesome/themes"
+themes        = config .. "/awesome-themes"
 themename     = "/arch"
 if not awful.util.file_readable(themes .. themename .. "/theme.lua") then
        themes = sharedthemes
